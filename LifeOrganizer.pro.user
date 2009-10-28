@@ -204,8 +204,8 @@
    <valuelist key="abstractProcess.Environment" type="QVariantList">
     <value type="QString">ALLUSERSPROFILE=C:\ProgramData</value>
     <value type="QString">APPDATA=C:\Users\Ejik\AppData\Roaming</value>
+    <value type="QString">CADM=C:\IM\CADM</value>
     <value type="QString">CLASSPATH=.;C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip</value>
-    <value type="QString">CLIENTNAME=P4</value>
     <value type="QString">COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files</value>
     <value type="QString">COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files</value>
     <value type="QString">COMMONPROGRAMW6432=C:\Program Files\Common Files</value>
@@ -214,12 +214,16 @@
     <value type="QString">FP_NO_HOST_CHECK=NO</value>
     <value type="QString">HOMEDRIVE=C:</value>
     <value type="QString">HOMEPATH=\Users\Ejik</value>
+    <value type="QString">IMTMP=C:\IM\CFG</value>
+    <value type="QString">KMP_DUPLICATE_LIB_OK=TRUE</value>
     <value type="QString">LOCALAPPDATA=C:\Users\Ejik\AppData\Local</value>
     <value type="QString">LOGONSERVER=\\C2DPC</value>
     <value type="QString">NUMBER_OF_PROCESSORS=2</value>
+    <value type="QString">OMP_NUM_THREADS=2</value>
     <value type="QString">OS=Windows_NT</value>
-    <value type="QString">PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
+    <value type="QString">PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\SlickEditV14.0.1\win\;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
     <value type="QString">PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</value>
+    <value type="QString">PERL5LIB=C:\oracle\product\10.2.0\db_1\perl\5.8.3\lib\MSWin32-x86;C:\oracle\product\10.2.0\db_1\perl\5.8.3\lib;C:\oracle\product\10.2.0\db_1\perl\5.8.3\lib\MSWin32-x86;C:\oracle\product\10.2.0\db_1\perl\site\5.8.3;C:\oracle\product\10.2.0\db_1\perl\site\5.8.3\lib;C:\oracle\product\10.2.0\db_1\sysman\admin\scripts;C:\oracle\product\10.2.0\db_1\perl\lib\5.8.3\MSWin32-x86;C:\oracle\product\10.2.0\db_1\perl\lib\5.8.3;C:\oracle\product\10.2.0\db_1\perl\5.8.3\lib\MSWin32-x86-multi-thread;C:\oracle\product\10.2.0\db_1\perl\site\5.8.3;C:\oracle\product\10.2.0\db_1\perl\site\5.8.3\lib;C:\oracle\product\10.2.0\db_1\sysman\admin\scripts</value>
     <value type="QString">PROCESSOR_ARCHITECTURE=x86</value>
     <value type="QString">PROCESSOR_ARCHITEW6432=AMD64</value>
     <value type="QString">PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 15 Stepping 13, GenuineIntel</value>
@@ -233,17 +237,19 @@
     <value type="QString">PUBLIC=C:\Users\Public</value>
     <value type="QString">QTDIR=C:/Qt/2009.03/qt</value>
     <value type="QString">QTJAVA=C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip</value>
-    <value type="QString">SESSIONNAME=RDP-Tcp#0</value>
+    <value type="QString">SESSIONNAME=Console</value>
     <value type="QString">SYSTEMDRIVE=C:</value>
     <value type="QString">SYSTEMROOT=C:\Windows</value>
     <value type="QString">TEMP=C:\Users\Ejik\AppData\Local\Temp</value>
     <value type="QString">TMP=C:\Users\Ejik\AppData\Local\Temp</value>
+    <value type="QString">UGII_BASE_DIR=C:\Program Files (x86)\UGS\NX 6.0</value>
+    <value type="QString">UGII_LANG=russian</value>
+    <value type="QString">UGII_ROOT_DIR=C:\Program Files (x86)\UGS\NX 6.0\UGII\</value>
+    <value type="QString">UGS_LICENSE_SERVER=28000@c2dpc</value>
     <value type="QString">USERDOMAIN=C2DPC</value>
     <value type="QString">USERNAME=Ejik</value>
     <value type="QString">USERPROFILE=C:\Users\Ejik</value>
     <value type="QString">WINDIR=C:\Windows</value>
-    <value type="QString">__APPCOMPAT_MANIFEST=</value>
-    <value type="QString">__COMPAT_LAYER=VistaSetup</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList">
     <value type="QString">C:/Projects/Life-organizer/Life-organizer/LifeOrganizer.pro</value>
@@ -251,7 +257,7 @@
     <value type="QString">win32-g++</value>
     <value type="QString">-r</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString">C:/Qt/2009.03/qt/bin/qmake.exe</value>
+   <value key="abstractProcess.command" type="QString">c:/qt/2009.03/qt/bin/qmake.exe</value>
    <value key="abstractProcess.enabled" type="bool">false</value>
    <value key="abstractProcess.workingDirectory" type="QString">C:/Projects/Life-organizer/Life-organizer</value>
    <value key="buildConfiguration" type=""></value>
@@ -264,8 +270,8 @@
    <valuelist key="abstractProcess.Environment" type="QVariantList">
     <value type="QString">ALLUSERSPROFILE=C:\ProgramData</value>
     <value type="QString">APPDATA=C:\Users\Ejik\AppData\Roaming</value>
+    <value type="QString">CADM=C:\IM\CADM</value>
     <value type="QString">CLASSPATH=.;C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip</value>
-    <value type="QString">CLIENTNAME=P4</value>
     <value type="QString">COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files</value>
     <value type="QString">COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files</value>
     <value type="QString">COMMONPROGRAMW6432=C:\Program Files\Common Files</value>
@@ -274,12 +280,16 @@
     <value type="QString">FP_NO_HOST_CHECK=NO</value>
     <value type="QString">HOMEDRIVE=C:</value>
     <value type="QString">HOMEPATH=\Users\Ejik</value>
+    <value type="QString">IMTMP=C:\IM\CFG</value>
+    <value type="QString">KMP_DUPLICATE_LIB_OK=TRUE</value>
     <value type="QString">LOCALAPPDATA=C:\Users\Ejik\AppData\Local</value>
     <value type="QString">LOGONSERVER=\\C2DPC</value>
     <value type="QString">NUMBER_OF_PROCESSORS=2</value>
+    <value type="QString">OMP_NUM_THREADS=2</value>
     <value type="QString">OS=Windows_NT</value>
-    <value type="QString">PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
+    <value type="QString">PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\SlickEditV14.0.1\win\;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
     <value type="QString">PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</value>
+    <value type="QString">PERL5LIB=C:\oracle\product\10.2.0\db_1\perl\5.8.3\lib\MSWin32-x86;C:\oracle\product\10.2.0\db_1\perl\5.8.3\lib;C:\oracle\product\10.2.0\db_1\perl\5.8.3\lib\MSWin32-x86;C:\oracle\product\10.2.0\db_1\perl\site\5.8.3;C:\oracle\product\10.2.0\db_1\perl\site\5.8.3\lib;C:\oracle\product\10.2.0\db_1\sysman\admin\scripts;C:\oracle\product\10.2.0\db_1\perl\lib\5.8.3\MSWin32-x86;C:\oracle\product\10.2.0\db_1\perl\lib\5.8.3;C:\oracle\product\10.2.0\db_1\perl\5.8.3\lib\MSWin32-x86-multi-thread;C:\oracle\product\10.2.0\db_1\perl\site\5.8.3;C:\oracle\product\10.2.0\db_1\perl\site\5.8.3\lib;C:\oracle\product\10.2.0\db_1\sysman\admin\scripts</value>
     <value type="QString">PROCESSOR_ARCHITECTURE=x86</value>
     <value type="QString">PROCESSOR_ARCHITEW6432=AMD64</value>
     <value type="QString">PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 15 Stepping 13, GenuineIntel</value>
@@ -293,18 +303,21 @@
     <value type="QString">PUBLIC=C:\Users\Public</value>
     <value type="QString">QTDIR=C:/Qt/2009.03/qt</value>
     <value type="QString">QTJAVA=C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip</value>
-    <value type="QString">SESSIONNAME=RDP-Tcp#0</value>
+    <value type="QString">SESSIONNAME=Console</value>
     <value type="QString">SYSTEMDRIVE=C:</value>
     <value type="QString">SYSTEMROOT=C:\Windows</value>
     <value type="QString">TEMP=C:\Users\Ejik\AppData\Local\Temp</value>
     <value type="QString">TMP=C:\Users\Ejik\AppData\Local\Temp</value>
+    <value type="QString">UGII_BASE_DIR=C:\Program Files (x86)\UGS\NX 6.0</value>
+    <value type="QString">UGII_LANG=russian</value>
+    <value type="QString">UGII_ROOT_DIR=C:\Program Files (x86)\UGS\NX 6.0\UGII\</value>
+    <value type="QString">UGS_LICENSE_SERVER=28000@c2dpc</value>
     <value type="QString">USERDOMAIN=C2DPC</value>
     <value type="QString">USERNAME=Ejik</value>
     <value type="QString">USERPROFILE=C:\Users\Ejik</value>
     <value type="QString">WINDIR=C:\Windows</value>
-    <value type="QString">__APPCOMPAT_MANIFEST=</value>
-    <value type="QString">__COMPAT_LAYER=VistaSetup</value>
    </valuelist>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
    <valuelist key="abstractProcess.arguments" type="QVariantList">
     <value type="QString">-w</value>
    </valuelist>

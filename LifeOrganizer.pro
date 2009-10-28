@@ -41,3 +41,4 @@ HEADERS += src/mainwindow.h \
 FORMS += src/mainwindow.ui \
     src/newdbview.ui \
     src/tabwidget.ui
+OTHER_FILES += README

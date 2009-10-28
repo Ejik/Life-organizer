@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'newdbview.ui'
 **
-** Created: Tue 22. Sep 16:02:13 2009
+** Created: Wed 28. Oct 09:23:18 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
