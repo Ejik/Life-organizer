@@ -20,16 +20,24 @@ SOURCES += src/main.cpp \
     src/datalayer.cpp \
     src/corelib.cpp \
     src/globalcontext.cpp \
-    src/mainwindowcontroller.cpp \
-    src/tabwidget.cpp
+    src/tabwidget.cpp \
+    src/treemodel.cpp \
+    src/treeitem.cpp \
+    src/task.cpp \
+    src/mainviewcontroller.cpp \
+    src/mainviewpresentationmodel.cpp
 HEADERS += src/mainwindow.h \
     src/bootstrapper.h \
     src/newdbview.h \
     src/datalayer.h \
     src/corelib.h \
     src/globalcontext.h \
-    src/mainwindowcontroller.h \
-    src/tabwidget.h
+    src/tabwidget.h \
+    src/treemodel.h \
+    src/treeitem.h \
+    src/task.h \
+    src/mainviewcontroller.h \
+    src/mainviewpresentationmodel.h
 FORMS += src/mainwindow.ui \
     src/newdbview.ui \
     src/tabwidget.ui

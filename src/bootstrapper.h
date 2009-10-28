@@ -10,8 +10,10 @@ public:
     Bootstrapper(QObject *parent);
     ~Bootstrapper();
     void Run();
+    void onAfterSystemStart();
 
 private:
+
     void OnSystemStart();
     void OnSystemShutdown();
     void CreateConnection();

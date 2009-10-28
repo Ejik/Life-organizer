@@ -22,6 +22,7 @@ void GlobalContext::saveData()
 
     settings.setValue("CurrentDB", CurrentDb);
     settings.setValue("RecentDB", RecentDb);
+
 }
 
 void GlobalContext::setCurrentDb(QString dbname)
@@ -51,4 +52,9 @@ void GlobalContext::addToRecent(const QString value)
     if (RecentDb.count() > 8) // remove more than 8 elements
         RecentDb.removeLast();
 
+}
+
+void GlobalContext::updateDb(QString filename)
+{
+    Datalayer::Instance().updateDb();
 }

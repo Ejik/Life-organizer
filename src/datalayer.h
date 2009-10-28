@@ -5,6 +5,7 @@
 #include "corelib.h"
 #include <QtSql>
 #include <QString>
+#include "task.h"
 
 class Datalayer : public QObject
 {
@@ -18,6 +19,8 @@ public:
     void Init();
     void ShutDown();
     void openDB(QString dbname);
+    QList<Task *> readDatafromDb();
+    void updateDb();
 
 private:
     Datalayer();
@@ -25,6 +28,9 @@ private:
     void operator = (Datalayer const &);
 
     QSqlDatabase db;
+
+private slots:
+
 };
 
 #endif // DATALAYER_H

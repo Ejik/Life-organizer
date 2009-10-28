@@ -5,7 +5,6 @@
 #include <QStringList>
 #include <QString>
 
-
 class GlobalContext : public QObject
 {
     Q_OBJECT
@@ -23,6 +22,7 @@ public:
     void readData();
     void saveData();
     void setCurrentDb(QString dbname);
+    void updateDb(QString filename);
 
 private:
     GlobalContext();
@@ -32,7 +32,7 @@ private:
     void addToRecent(const QString value);
     
 signals:
-    void currentDbChanged(QString value);
+    void currentDbChanged(const QString newDbName);
 };
 
 #endif // GLOBALCONTEXT_H

@@ -2,20 +2,27 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QFileDialog>
-#include "newdbview.h"
 #include "globalcontext.h"
+#include "tabwidget.h"
+#include "mainviewpresentationmodel.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
-    GlobalContext *gc = &GlobalContext::Instance();
-    connect(gc, SIGNAL(currentDbChanged(QString)), this, SLOT(setWindowTitle(QString)));
+    _isLoadingView = false;
 
-    setWindowTitle(GlobalContext::Instance().CurrentDb);
+    loadFromPModel();
+   
+    connect(&GlobalContext::Instance(), SIGNAL(currentDbChanged(QString)), this, SLOT(loadFromPModel()));
 
-    controller.setWidget(ui->tabWidget);
+    //connect(&pModel, SIGNAL(updateView()), this, SLOT(loadFromPModel()));
+    //connect(ui->tabWidget->model, SIGNAL(dataChanged(QModelIndex,QModelIndex)), this, SLOT(on_dataChanged(QModelIndex, QModelIndex)));
+
+    //setWindowTitle(GlobalContext::Instance().CurrentDb);
+
 }
 
 MainWindow::~MainWindow()
@@ -23,29 +30,35 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::setWindowTitle(const QString value)
+void MainWindow::loadFromPModel()
 {
+     if (!_isLoadingView) {
+        _isLoadingView = true;
+        setWindowTitle(pModel.getWindowTitle());
+        ui->menuOpen_recent->clear();
+        ui->menuOpen_recent->addActions(pModel.recentMenuList);
+        _isLoadingView = false;
+    }
+}
 
-    QWidget::setWindowTitle("Life organizer - " + value);
+void MainWindow::saveToPModel()
+{
+    //pModel.windowTitle = windowTitle();
 
-    /// Fill the recent menu
-    ui->menuOpen_recent->clear();
-    QStringListIterator i(GlobalContext::Instance().RecentDb);
-    while (i.hasNext()) {
-        
-        QAction *newAction = new QAction(this);
-        newAction->setText(i.next());
-        ui->menuOpen_recent->addAction(newAction);
+}
+
+void MainWindow::syncWithPModel()
+{
+    if (!_isLoadingView) {
+        saveToPModel();
+        loadFromPModel();
     }
 }
 
 void MainWindow::on_action_New_triggered()
 {
-    newdbview view(this);
-    if (view.exec())
-    {
-
-    }
+    pModel.newDbCreate();
+    loadFromPModel();
 }
 
 void MainWindow::on_actionE_xit_triggered()
@@ -60,13 +73,35 @@ void MainWindow::on_actionAbout_Life_Organizer_triggered()
 
 void MainWindow::on_action_Open_triggered()
 {
-    QFileDialog dialog(this, tr("Open db"), "", tr("Data files (*.db) | *.db"));
+   pModel.openNewDb();
+   loadFromPModel();
+}
+
+
+void MainWindow::on_dataChanged(QModelIndex current, QModelIndex prev)
+{
+   pModel.dataChanged();
+   loadFromPModel();
+}
+
+
+void MainWindow::on_action_Save_triggered()
+{
+    GlobalContext::Instance().updateDb(QString::null);
+}
+
+void MainWindow::on_actionSave_As_triggered()
+{
+    QFileDialog dialog(this, tr("Save db as"), "", tr("Data files (*.db) | *.db"));
     dialog.setFileMode(QFileDialog::AnyFile);
     if (dialog.exec())
     {
         QStringList files = dialog.selectedFiles();
-        GlobalContext::Instance().setCurrentDb(files.value(0));
+        GlobalContext::Instance().updateDb(files.value(0));
     }
 }
 
-
+void MainWindow::on_actionNew_task_triggered()
+{
+    pModel.insertNewTask();
+}

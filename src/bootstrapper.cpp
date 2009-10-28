@@ -28,6 +28,11 @@ void Bootstrapper::OnSystemShutdown()
 
 }
 
+void Bootstrapper::onAfterSystemStart()
+{
+    if (!GlobalContext::Instance().CurrentDb.isEmpty())
+        GlobalContext::Instance().setCurrentDb(GlobalContext::Instance().CurrentDb);
+}
 
 void Bootstrapper::CreateConnection()
 {
@@ -49,11 +54,6 @@ void Bootstrapper::Run()
     GlobalContext::Instance().readData();
 
     CreateConnection();
-
-    if (!GlobalContext::Instance().CurrentDb.isEmpty())
-    {
-        Datalayer::Instance().openDB(GlobalContext::Instance().CurrentDb);
-    }
 
     this->OnSystemStart();
 }

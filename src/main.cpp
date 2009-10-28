@@ -10,5 +10,6 @@ int main(int argc, char *argv[])
     bs.Run();
     MainWindow w;
     w.show();
+    bs.onAfterSystemStart();
     return a.exec();
 }
